@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align:center">
+<h1>REMOTE FLASH</h1>
+
+<button onclick="send('ON')">NYALAKAN</button>
+<button onclick="send('OFF')">MATIKAN</button>
+
+<script>
+function send(cmd) {
+    fetch(`/api/set?cmd=${cmd}`);
+}
+</script>
+</body>
+</html>
